@@ -1,0 +1,7 @@
+"0",""
+"0","plots <- list.files(""plots/new_players"")"
+"0",""
+"0","for(i in plots){"
+"0","  filename <- file.path(here(""plots"", ""new_players"", i))"
+"0","   cat(""![text]("",filename,"")"")"
+"0","}"

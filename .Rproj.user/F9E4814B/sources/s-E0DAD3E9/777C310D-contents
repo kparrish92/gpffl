@@ -1,0 +1,27 @@
+---
+title: "All Player Cards"
+output: html_document
+---
+
+```{r, include=FALSE}
+knitr::opts_chunk$set(
+  comment = "#>", echo = FALSE, out.width = 6, out.width = "100px"
+)
+```
+
+```{r, include=FALSE}
+library(here)
+library(tidyverse)
+```
+
+```{r, results = 'asis'}
+
+plots <- list.files("plots/all_plots")
+
+for(i in plots){
+  filename <- file.path(here("plots", "all_plots", i))
+   cat("![text](",filename,")")
+}
+```
+
+

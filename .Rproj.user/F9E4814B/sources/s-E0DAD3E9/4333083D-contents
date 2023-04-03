@@ -1,0 +1,27 @@
+---
+title: "Returning Players"
+output: html_document
+---
+
+```{r, include=FALSE}
+knitr::opts_chunk$set(
+  comment = "#>", echo = FALSE, out.width = 6, out.width = "100px"
+)
+```
+
+```{r, include=FALSE}
+library(here)
+library(tidyverse)
+```
+
+```{r, results = 'asis'}
+
+plots <- list.files(here("plots", "returning_players"))
+
+for(i in plots){
+  filename <- file.path(here("plots", "returning_players", i))
+   cat("![text](",filename,")")
+}
+```
+
+

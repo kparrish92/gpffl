@@ -1,0 +1,42 @@
+library(here)
+library(tidyverse)
+
+open_players = read.csv(here("open_profiles.csv"), na.strings=c("","NA")) %>% 
+  filter(!is.na(First.Name))
+
+qb_list = open_players %>% 
+  filter(QB == "Yes") 
+
+qb_list_2 = open_players %>% 
+  filter(QB == "Prefer Back up QB")
+
+
+
+open_players_advanced = open_players %>% 
+  filter(Overall.Skill == "Advanced")
+
+open_players_int = open_players %>% 
+  filter(Overall.Skill == "Intermediate")
+
+open_players_beg = open_players %>% 
+  filter(Overall.Skill == "Beginner")
+
+
+open_players %>% 
+  group_by(Overall.Skill) %>% 
+  summarize(n = n())
+
+open_players_new = read.csv(here("open_profiles.csv")) %>% 
+  filter(New.Return == "new")
+
+open_players_new = read.csv(here("open_profiles.csv")) %>% 
+  filter(New.Return == "new") %>%
+  filter(Overall.Skill == "Intermediate")
+
+
+
+open_players_return = read.csv(here("open_profiles.csv")) %>% 
+  filter(New.Return == "returning")
+
+
+

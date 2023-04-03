@@ -1,0 +1,20 @@
+
+First.Name = open_players$First.Name[1]
+Last.Name = open_players$Last.Name[1]
+Previous.Flag.Positions = open_players$Previous.Flag.Positions[1]
+Dates.Missing = open_players$Dates.Missing[1]
+open_players_new = open_players$open_players_new[1]
+Overall.Skill = open_players$Overall.Skill[1]
+Height = open_players$Height[1]
+Shirt.Size = open_players$Shirt.Size[1]
+Pronouns = open_players$Pronouns[1]
+Current.sports = open_players$Current.sports[1]
+HS.Coll.Sports = open_players$HS.Coll.Sports[1]
+
+
+make_playercard(First.Name, Last.Name, 
+                           Previous.Flag.Positions, 
+                           Dates.Missing, open_players_new,
+                           Overall.Skill,
+                           Height, Shirt.Size,
+                           Pronouns)
